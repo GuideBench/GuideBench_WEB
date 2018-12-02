@@ -12,12 +12,13 @@ export class EventcheckComponent implements OnInit {
 
   ngOnInit() {
   }
+
   eventcheck(event) {
     event.preventDefault()
     const target = event.target
     const event_title = target.querySelector('#event_title').value
     const event_content = target.querySelector('#event_content').value
     console.log(event_title,event_content);
-    this.Auth.getevent(event_title,event_content)
+     this.Auth.getevent(event_title, event_content)
    }
 }
