@@ -1,0 +1,44 @@
+/*#login{
+    display: none;
+}*/
+#logout{
+    display: none;
+}
+#admin{
+    display: none;
+}
+#qna{
+    display: none;
+}
+#event{
+    display: none;
+}
+#benchinfo{
+    display: none;
+}
+#boardinfo{
+    display: none;
+}
+
+.btn.btn-primary {
+    background: #bda492 none repeat scroll 0 0;
+    border-color: #bda492;
+    color: #6b5545;
+  }
+
+.navbar-custom {
+    background-color: #bda492;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color: #6b5545 ;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color: #00ff0000;
+}
