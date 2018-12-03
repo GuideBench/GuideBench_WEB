@@ -13,6 +13,7 @@ import { BoardinfoComponent } from './boardinfo/boardinfo.component';
 import { QnaComponent } from './qna/qna.component';
 import { AuthService } from './auth.service';
 import { EventcheckComponent } from './eventcheck/eventcheck.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,7 @@ import { EventcheckComponent } from './eventcheck/eventcheck.component';
       }
     ])
   ],
-  providers: [AuthService],
+  providers: [AuthService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

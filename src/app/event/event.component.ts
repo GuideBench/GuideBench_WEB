@@ -13,3 +13,4 @@ export class EventComponent implements OnInit {
   }
 
 }
+
