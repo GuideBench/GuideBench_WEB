@@ -1,10 +1,11 @@
-import { Injectable } from '@angular/core';
+import { Injectable, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { Router, NavigationExtras } from '@angular/router';
-
+import { NgForm } from '@angular/forms';
 @Injectable()
 export class AuthService {
-
+  @ViewChild("f")
+  form: NgForm;
   constructor(private http: HttpClient, public router: Router) { }
 
   getlogin(id, pw) {
@@ -25,15 +26,18 @@ export class AuthService {
     })
   }
 
-  getevent(event_title, event_content) {
-    return this.http.post('/event', {
-      event_title,
-      event_content
+  getevent(title, content) {
+    this.http.post('/event', {
+      title,
+      content
     }).subscribe(data => {
       console.log(data, "event등록성공")
       this.router.navigate(['/event']);
-    })
+    }
+    )
   }
+
+ 
 }
 
 
