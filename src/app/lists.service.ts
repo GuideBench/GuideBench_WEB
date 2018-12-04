@@ -1,9 +1,21 @@
 import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { map } from 'rxjs/operators';
+const BASE_URL = "http://13.124.180.79:3000";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ListsService {
 
-  constructor() { }
+  constructor(public http:Http) { }
+
+  geteventlist(){
+    return this.http.get(BASE_URL + '/event/getevent')
+      .pipe(map(res=> {
+        console.log(res);
+        return res.json();
+      }));
+  }
+  
 }

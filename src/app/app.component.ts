@@ -15,8 +15,9 @@ export class AppComponent {
   ngOnInit(){
     const tokentest = localStorage.getItem('token');
     console.log(tokentest);
-
-    if(tokentest == '1'){
+    const adminlogin = localStorage.getItem('adminid,adminpw');
+    console.log(adminlogin);
+    if(tokentest == '0' && adminlogin=='admin,admin'){
       document.getElementById('admin').style.display = "inline-block"
       document.getElementById('qna').style.display = "inline-block"
       document.getElementById('event').style.display = "inline-block"
@@ -49,9 +50,11 @@ export class AppComponent {
     document.getElementById('boardinfo').style.display = "none"
     document.getElementById('logout').style.display = "none"
     document.getElementById('login').style.display = "inline-block" //로그인했을때 메뉴바 보이게 하기
-    const token = "0";
+    const token = '1';
     localStorage.setItem('token',token);
+    const tokentest = localStorage.getItem('token');
+    console.log(tokentest);
     this.router.navigate(['']);
-    
+    console.log("logout sucess");
   }
 }

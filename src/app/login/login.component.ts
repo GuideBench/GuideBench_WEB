@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
     console.log(id,pw);
     const token = "1";
     localStorage.setItem('token',token);
-     this.Auth.getlogin(id, pw)
+   
+    this.Auth.getlogin(id, pw)
    }
 }

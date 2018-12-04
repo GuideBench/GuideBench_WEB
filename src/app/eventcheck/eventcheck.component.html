@@ -10,13 +10,13 @@
 <!------ Include the above in your HEAD tag ---------->
   </head>
 
-<!-- 
+
 <body id="eventcheck" align="center">
   <div class="container">
     <div class="eventcheck">
       <h2>새로운 Event 등록</h2>
       <br>
-<form (submit)="eventcheck($event)">
+<form  f="ngForm" (submit)="eventcheck($event)">
   <div class="form-group">
       <h5>제목</h5><input type="text" id="event_title" placeholder="제목" class="form-control">
   </div>
@@ -32,31 +32,5 @@
 
 </form>
 </div></div>
-</body> -->
-
-<!-- <form (submit)="eventcheck($event)">
-  <input  name="event_title" type="text" class="form-control" id="event_title" placeholder="title">
-  <input name="event_content" type="text" class="form-control" id="event_content" placeholder="content">
-  <input type="submit">
-</form> -->
-
-<div class="card card-blur">
-    <div class="card-header">
-      <p>이벤트 등록</p>
-    </div>
-    
-    
-   <form f="ngForm" (submit)="eventcheck($event)">
-     
-        <div class="form-group">
-           <label for="event_title">제목</label> &nbsp; <input ngModel name="event_title" type="text" class="form-control" id="event_title" placeholder="title">
-        </div> 
-        <div class="form-group">
-           <label for="event_content">내용</label> &nbsp; <input type="text" class="form-control" ngModel name="event_content" id="event_content" placeholder="content">
-        </div>
-    <br/>
-    <button type="submit" class="btn btn-primary btn-sm" style="width:5em">Update</button>
-    </form>
-
-  </div>
+</body> 
 </html>

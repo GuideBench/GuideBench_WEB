@@ -14,6 +14,9 @@ import { QnaComponent } from './qna/qna.component';
 import { AuthService } from './auth.service';
 import { EventcheckComponent } from './eventcheck/eventcheck.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { ListsService } from './lists.service';
+import { HttpModule } from '@angular/http';
+import { EventdetailComponent } from './eventdetail/eventdetail.component';
 
 @NgModule({
   declarations: [
@@ -25,9 +28,11 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     BenchinfoComponent,
     BoardinfoComponent,
     QnaComponent,
-    EventcheckComponent
+    EventcheckComponent,
+    EventdetailComponent
   ],
   imports: [ 
+    HttpModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -66,7 +71,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
       }
     ])
   ],
-  providers: [AuthService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [AuthService,ListsService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
