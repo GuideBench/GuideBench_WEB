@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class EventdetailComponent implements OnInit {
 
   @Input("eventContent") eventContent: string;
+  
   constructor() { }
 
   ngOnInit() {

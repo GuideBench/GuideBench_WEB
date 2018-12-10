@@ -17,5 +17,21 @@ export class ListsService {
         return res.json();
       }));
   }
+
+  getuserlist(){
+    return this.http.get(BASE_URL + '/user/getuser')
+      .pipe(map(res=> {
+        console.log(res);
+        return res.json();
+      }));
+  }
+  
+  getqnalist(){
+    return this.http.get(BASE_URL + '/qna/getqna')
+      .pipe(map(res=> {
+        console.log(res);
+        return res.json();
+      }));
+  }
   
 }

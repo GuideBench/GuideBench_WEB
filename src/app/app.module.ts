@@ -17,6 +17,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ListsService } from './lists.service';
 import { HttpModule } from '@angular/http';
 import { EventdetailComponent } from './eventdetail/eventdetail.component';
+import { QnadetailComponent } from './qnadetail/qnadetail.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { EventdetailComponent } from './eventdetail/eventdetail.component';
     BoardinfoComponent,
     QnaComponent,
     EventcheckComponent,
-    EventdetailComponent
+    EventdetailComponent,
+    QnadetailComponent
   ],
   imports: [ 
     HttpModule,

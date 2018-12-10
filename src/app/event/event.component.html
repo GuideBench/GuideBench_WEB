@@ -19,7 +19,7 @@
 <h2>Event List</h2>
 <div *ngIf="selectedEventContent == null">
   <div *ngFor="let event of events; let i = index" (click)="showDetailPage(i)">
-    <h4>{{event.event_title}}</h4>
+    <h4>{{i+1}}{{event.event_title}}</h4>
   </div>
 </div>
 <app-eventdetail *ngIf="selectedEventContent != null" [eventContent]="selectedEventContent"></app-eventdetail>

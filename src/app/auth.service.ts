@@ -48,6 +48,15 @@ export class AuthService {
     )
   }
 
+  getanswer(content) {
+    this.http.post('/qna/answer/:question_idx', {
+      content
+    }).subscribe(data => {
+      console.log(data, "답변달기 완료")
+      this.router.navigate(['/qna']);
+    }
+    )
+  }
  
 }
 

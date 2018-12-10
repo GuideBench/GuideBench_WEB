@@ -26,7 +26,6 @@ export class AppComponent {
       document.getElementById('logout').style.display = "inline-block"
       document.getElementById('login').style.display = "none" //로그인했을때 메뉴바 보이게 하기
       this.router.navigate(['']);
-  
     }
     else{
       document.getElementById('admin').style.display = "none"
@@ -37,9 +36,7 @@ export class AppComponent {
       document.getElementById('logout').style.display = "none"
       document.getElementById('login').style.display = "inline-block" //로그인했을때 메뉴바 보이게 하기
       this.router.navigate(['']);
-        
     }
-    
   }
   
   onclick(){
@@ -55,6 +52,6 @@ export class AppComponent {
     const tokentest = localStorage.getItem('token');
     console.log(tokentest);
     this.router.navigate(['']);
-    console.log("logout sucess");
+    console.log("logout success");
   }
 }
