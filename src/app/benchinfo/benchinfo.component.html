@@ -1,1 +1,27 @@
-
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+  
+  <h2>Bench List</h2>
+  <!-- <div *ngIf="selectedEventContent == null"> <<(click)="showDetailPage(i)">>이거 밑에 div에 들어가야함-->
+    <div *ngFor="let bench of benchs; let i = index" >
+      <h4>{{i+1}}&nbsp;&nbsp;{{bench.bench_name}}&nbsp;&nbsp;{{bench.bench_longitude}}&nbsp;&nbsp;{{bench.bench_latitude}}&nbsp;&nbsp;{{bench.bench_address}}</h4>
+    </div>
+  <!-- </div> -->
+  <!-- <app-eventdetail *ngIf="selectedEventContent != null" [eventContent]="selectedEventContent"></app-eventdetail>
+  <button class="btn btn-primary" align="center" (click)="back()">&nbsp;목록보기</button> -->
+  <a routerLink="/benchcheck"><button type="submit" class="btn btn-primary" align="center">&nbsp;새로운BENCH등록</button></a>

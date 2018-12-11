@@ -29,7 +29,7 @@ export class AdminComponent implements OnInit {
 }
 
 interface User{
-  id : string,
-  pw : string,
-  name : string
+  user_id : string,
+  user_pw : string,
+  user_name : string
 }

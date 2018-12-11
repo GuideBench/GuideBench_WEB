@@ -21,7 +21,7 @@ export class AuthService {
       document.getElementById('qna').style.display = "inline-block"
       document.getElementById('event').style.display = "inline-block"
       document.getElementById('benchinfo').style.display = "inline-block"
-      document.getElementById('boardinfo').style.display = "inline-block"
+      // document.getElementById('boardinfo').style.display = "inline-block"
       document.getElementById('logout').style.display = "inline-block"
       document.getElementById('login').style.display = "none" //로그인했을때 메뉴바 보이게 하기
       const token = "0";
@@ -54,6 +54,19 @@ export class AuthService {
     }).subscribe(data => {
       console.log(data, "답변달기 완료")
       this.router.navigate(['/qna']);
+    }
+    )
+  }
+ 
+  getbench(name,longitude,latitude,address) {
+    this.http.post('/bench', {
+      name,
+      longitude,
+      latitude,
+      address
+    }).subscribe(data => {
+      console.log(data, "벤치등록 완료")
+      this.router.navigate(['/benchinfo']);
     }
     )
   }

@@ -23,10 +23,10 @@ export class EventcheckComponent implements OnInit {
   eventcheck(event) {
     event.preventDefault()
     const target = event.target
-    const event_title = target.querySelector('#event_title').value
-    const event_content = target.querySelector('#event_content').value
-    console.log(event_title,event_content);
-      this.Auth.getevent(event_title, event_content);
+    const title = target.querySelector('#title').value
+    const content = target.querySelector('#content').value
+    console.log(title,content);
+      this.Auth.getevent(title, content);
    }
 }
 

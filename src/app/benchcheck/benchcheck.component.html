@@ -11,23 +11,28 @@
   </head>
 
 
-<body id="eventcheck" align="center">
+<body id="benchcheck" align="center">
   <div class="container">
-    <div class="eventcheck">
-      <h2>새로운 Event 등록</h2>
+    <div class="benchcheck">
+      <h2>새로운 Bench 등록</h2>
       <br>
-<form  f="ngForm" (submit)="eventcheck($event)">
+<form  f="ngForm" (submit)="benchcheck($event)">
   <div class="form-group">
-      <h5>제목</h5><input type="text" id="title" placeholder="제목" class="form-control">
+      <h5>이름</h5><input type="text" id="name" placeholder="benchname" class="form-control">
   </div>
   <br>
   <div class="form-group">
-   <h5>내용</h5> 
-   
-   <textarea  id="content" placeholder="내용" class="form-control" rows="10"></textarea>
-  </div>
+   <h5>경도</h5> <input type="text" id="longitude" placeholder="경도" class="form-control">
+  </div> 
   <br>
-
+  <div class="form-group">
+    <h5>위도</h5> <input type="text" id="latitude" placeholder="위도" class="form-control">
+   </div> 
+   <br>
+   <div class="form-group">
+    <h5>주소</h5> <input type="text" id="address" placeholder="주소" class="form-control">
+   </div> 
+   <br>
   <button type="submit" class="btn btn-primary" >등록</button>
 
 </form>

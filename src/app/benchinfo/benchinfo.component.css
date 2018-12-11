@@ -1,0 +1,11 @@
+
+  .btn.btn-primary {
+    background: #bda492 none repeat scroll 0 0;
+    border-color: #6b5545;
+    color: #6b5545;
+    font-size: 14px;
+    width: 30%;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+  }
