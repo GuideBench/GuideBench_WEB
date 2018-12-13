@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { ListsService } from '../lists.service';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-qna',
@@ -12,10 +13,17 @@ export class QnaComponent implements OnInit {
   public qnas: QnA[] = [];
   public selectedquestionContent: string = null;
   public selectedanswerContent: string = null;
+  public selectedquestionid: string = null;
 
-  constructor(public http:Http, private Lists:ListsService) { }
+  constructor(public http:Http, private Lists:ListsService, public router:Router) { }
 
   ngOnInit() {
+    const tokentest = localStorage.getItem('token');
+    console.log(tokentest);
+    if(tokentest == '1'){
+      this.router.navigate(['login'])
+      alert('로그인 후 이용해주세요.')
+        }
     this.Lists.getqnalist().subscribe((qnas)=>{
       console.log(qnas);
       if(qnas !=0){
@@ -29,6 +37,7 @@ export class QnaComponent implements OnInit {
   }
 
 public showDetailPage(index: number) {
+  this.selectedquestionid = this.qnas[index]._id;
   this.selectedquestionContent = this.qnas[index].question_content;
   this.selectedanswerContent=  this.qnas[index].answer_content;
 }
@@ -40,6 +49,7 @@ public back(){
 }
 
 interface QnA{
+  _id:string,
 question_title: string,
 question_content: string,
 question_name : string,

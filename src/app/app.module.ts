@@ -20,6 +20,7 @@ import { HttpModule } from '@angular/http';
 import { EventdetailComponent } from './eventdetail/eventdetail.component';
 import { QnadetailComponent } from './qnadetail/qnadetail.component';
 import { BenchcheckComponent } from './benchcheck/benchcheck.component';
+import { BenchdetailComponent } from './benchdetail/benchdetail.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BenchcheckComponent } from './benchcheck/benchcheck.component';
     EventcheckComponent,
     EventdetailComponent,
     QnadetailComponent,
-    BenchcheckComponent
+    BenchcheckComponent,
+    BenchdetailComponent
   ],
   imports: [ 
     HttpModule,
@@ -42,6 +44,7 @@ import { BenchcheckComponent } from './benchcheck/benchcheck.component';
     AppRoutingModule,
     HttpClientModule,
     RouterModule.forRoot([
+    
       {
         path: 'login',
         component: LoginComponent

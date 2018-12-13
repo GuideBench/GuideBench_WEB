@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-benchcheck',
@@ -8,9 +9,15 @@ import { AuthService } from '../auth.service';
 })
 export class BenchcheckComponent implements OnInit {
 
-  constructor(private Auth:AuthService) { }
+  constructor(private Auth:AuthService,public router:Router) { }
 
   ngOnInit() {
+    const tokentest = localStorage.getItem('token');
+    console.log(tokentest);
+    if(tokentest == '1'){
+      this.router.navigate(['login'])
+      alert('로그인 후 이용해주세요.')
+        }
   }
 
   benchcheck(event) {

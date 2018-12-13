@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { ListsService } from '../lists.service';
+import { ArrayType } from '@angular/compiler';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-benchinfo',
@@ -10,12 +12,18 @@ import { ListsService } from '../lists.service';
 export class BenchinfoComponent implements OnInit {
 
   public benchs: Bench[] = [];
-  // public selectedquestionContent: string = null;
-  // public selectedanswerContent: string = null;
+  public selectedbenchdetail: ArrayType = null;
 
-  constructor(public http:Http, private Lists:ListsService) { }
+
+  constructor(public http:Http, private Lists:ListsService,public router:Router) { }
 
   ngOnInit() {
+    const tokentest = localStorage.getItem('token');
+    console.log(tokentest);
+    if(tokentest == '1'){
+      this.router.navigate(['login'])
+      alert('로그인 후 이용해주세요.')
+        }
     this.Lists.getbenchlist().subscribe((benchs)=>{
       console.log(benchs);
       if(benchs !=0){
@@ -27,20 +35,19 @@ export class BenchinfoComponent implements OnInit {
       }
     });
   }
-  // public showDetailPage(index: number) {
-  //   this.selectedquestionContent = this.qnas[index].question_content;
-  //   this.selectedanswerContent=  this.qnas[index].answer_content;
-  // }
+  public showDetailPage(index: number) {
+    this.selectedbenchdetail = this.benchs[index].bench_info;
+  }
   
-  // public back(){
-  //   this.selectedquestionContent=null;
-  //   this.selectedanswerContent=null;
-  // }
+  public back(){
+    this.selectedbenchdetail=null;
+  }
 }
 
 interface Bench{
   bench_name: string,
   bench_longitude: string,
   bench_latitude: string,
-  bench_address: string
+  bench_address: string,
+  bench_info: ArrayType
   }

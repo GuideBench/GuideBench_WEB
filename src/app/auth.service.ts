@@ -24,8 +24,6 @@ export class AuthService {
       // document.getElementById('boardinfo').style.display = "inline-block"
       document.getElementById('logout').style.display = "inline-block"
       document.getElementById('login').style.display = "none" //로그인했을때 메뉴바 보이게 하기
-      const token = "0";
-      localStorage.setItem('token',token);
       const tokentest = localStorage.getItem('token');
       console.log(tokentest);
       const adminid="admin";
@@ -34,6 +32,7 @@ export class AuthService {
       localStorage.setItem('adminpw',adminpw);
       console.log(data, "Login Success")
       this.router.navigate(['']);
+      alert("가이드벤치의 관리자님 환영합니다.");
     })
   }
 
@@ -48,8 +47,8 @@ export class AuthService {
     )
   }
 
-  getanswer(content) {
-    this.http.post('/qna/answer/:question_idx', {
+  getanswer(content,id) {
+    this.http.post('/qna/answer/'+id, {
       content
     }).subscribe(data => {
       console.log(data, "답변달기 완료")
@@ -57,7 +56,7 @@ export class AuthService {
     }
     )
   }
- 
+ ng 
   getbench(name,longitude,latitude,address) {
     this.http.post('/bench', {
       name,
@@ -71,6 +70,7 @@ export class AuthService {
     )
   }
  
+
 }
 
 

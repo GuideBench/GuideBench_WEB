@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
     const id = target.querySelector('#id').value
     const pw = target.querySelector('#pw').value
     console.log(id,pw);
-    const token = "1";
+    const token = "0";
     localStorage.setItem('token',token);
    
     this.Auth.getlogin(id, pw)

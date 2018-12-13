@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationExtras } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service';
+
 
 @Component({
   selector: 'app-root',
@@ -10,15 +10,16 @@ import { CookieService } from 'ngx-cookie-service';
 export class AppComponent {
   title = 'GuideBench';
 
-  constructor(public router:Router, private cookieService : CookieService){}
+  constructor(public router:Router){}
 
 
   ngOnInit(){
     const tokentest = localStorage.getItem('token');
     console.log(tokentest);
-    const adminlogin = localStorage.getItem('adminid,adminpw');
-    console.log(adminlogin);
-    if(tokentest == '0' && adminlogin=='admin,admin'){
+    const adminidlogin = localStorage.getItem('adminid');
+    const adminpwlogin = localStorage.getItem('adminpw');
+    // console.log(adminidlogin,adminpwlogin);
+    if(tokentest == '0' && adminidlogin=='admin' && adminpwlogin=='admin'){
       document.getElementById('admin').style.display = "inline-block"
       document.getElementById('qna').style.display = "inline-block"
       document.getElementById('event').style.display = "inline-block"
@@ -45,7 +46,7 @@ export class AppComponent {
     document.getElementById('qna').style.display = "none"
     document.getElementById('event').style.display = "none"
     document.getElementById('benchinfo').style.display = "none"
-    document.getElementById('boardinfo').style.display = "none"
+    // document.getElementById('boardinfo').style.display = "none"
     document.getElementById('logout').style.display = "none"
     document.getElementById('login').style.display = "inline-block" //로그아웃했을때 메뉴바 보이게 하기
     const token = '1';
@@ -54,6 +55,7 @@ export class AppComponent {
     console.log(tokentest);
     this.router.navigate(['']);
     console.log("logout success");
+    alert("로그아웃 되었습니다");
   }
 
   

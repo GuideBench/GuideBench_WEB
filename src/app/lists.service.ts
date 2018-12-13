@@ -41,5 +41,13 @@ export class ListsService {
         return res.json();
       }));
   }
+
+  getbenchdetaillist(){
+    return this.http.get(BASE_URL + '/bench/getBenchDetail')
+      .pipe(map(res=> {
+        console.log(res);
+        return res.json();
+      }));
+  }
   
 }
