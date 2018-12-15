@@ -56,7 +56,7 @@ export class AuthService {
     }
     )
   }
- ng 
+ 
   getbench(name,longitude,latitude,address) {
     this.http.post('/bench', {
       name,
@@ -70,6 +70,17 @@ export class AuthService {
     )
   }
  
+  getbenchdetail(benchinfo_category,benchinfo_name,benchinfo_address,_id) {
+    this.http.post('/bench/'+_id+'/info', {
+      benchinfo_category,
+      benchinfo_name,
+      benchinfo_address
+    }).subscribe(data => {
+      console.log(data, "벤치별 시장/맛집 등록 완료")
+      this.router.navigate(['/benchinfo']);
+    }
+    )
+  }
 
 }
 

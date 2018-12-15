@@ -42,10 +42,11 @@ export class ListsService {
       }));
   }
 
-  getbenchdetaillist(){
-    return this.http.get(BASE_URL + '/bench/getBenchDetail')
+  getbenchdetaillist(id){
+    return this.http.get(BASE_URL + '/bench/'+ id +'/getInfo')
       .pipe(map(res=> {
         console.log(res);
+        console.log(BASE_URL + '/bench/'+ id +'/getInfo')
         return res.json();
       }));
   }

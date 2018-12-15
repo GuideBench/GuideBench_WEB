@@ -10,7 +10,10 @@ import {  Router } from '@angular/router';
 })
 export class BenchdetailComponent implements OnInit {
   
-  @Input("benchdetail") benchdetail: ArrayType;
+  // @Input("benchinfocategory") benchinfocategory: string;
+  // @Input("benchinfoname") benchinfoname: string;
+  // @Input("benchinfoaddress") benchinfoaddress: string;
+  @Input("benchid") benchid : string;
 
   constructor(private Auth:AuthService,public router:Router) { }
 
@@ -23,5 +26,14 @@ export class BenchdetailComponent implements OnInit {
         }
   }
 
+  detail(event) {
+    event.preventDefault()
+    const target = event.target
+    const benchinfo_category = target.querySelector('#category').value
+    const benchinfo_name = target.querySelector('#name').value
+    const benchinfo_address = target.querySelector('#address').value
+    console.log(benchinfo_category, benchinfo_name, benchinfo_address, "해당 벤치의 아이디 값 : " ,this.benchid);
+    this.Auth.getbenchdetail(benchinfo_category,benchinfo_name,benchinfo_address,this.benchid);
+   }
 
 }

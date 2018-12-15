@@ -1,4 +1,27 @@
 <p>
-  {{benchdetail}}
+  <!-- {{benchinfocategory}}
+  <br>
+  {{benchinfoname}}
+  <br>
+  {{benchinfoaddress}} -->
+  <br>
+  <body id="benchdetail" align="center">
+    <div class="container">
+      <div class="benchdetail">
+        <br>
+  <form  f="ngForm" (submit)="detail($event)">
+    <div class="form-group">
+         <h5>시장/맛집</h5>
+         <input type="text" id="category" placeholder="답변" class="form-control">
+         <h5>시장/맛집의 이름</h5>
+         <input type="text" id="name" placeholder="답변" class="form-control">
+         <h5>시장/맛집의 주소</h5>
+         <input type="text" id="address" placeholder="답변" class="form-control">
+    </div> 
+    <br>
+   <button type="submit" class="btn btn-primary" >등록</button>
+    </form>
+  </div></div>
+  </body> 
 </p>
 
