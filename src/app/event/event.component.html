@@ -1,22 +1,25 @@
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-</head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
 
 <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
 
-<h2>Event List</h2>
+<!-- <h2>Event List</h2>
 <div *ngIf="selectedEventContent == null">
   <div *ngFor="let event of events; let i = index" (click)="showDetailPage(i)">
     <h4>{{i+1}}&nbsp;&nbsp;{{event.event_title}}</h4>
@@ -24,4 +27,30 @@
 </div>
 <app-eventdetail *ngIf="selectedEventContent != null" [eventContent]="selectedEventContent"></app-eventdetail>
 <button class="btn btn-primary" align="center" (click)="back()">&nbsp;목록보기</button>
-<a routerLink="/eventcheck"><button type="submit" class="btn btn-primary" align="center">&nbsp;새로운EVENT등록</button></a>
+<a routerLink="/eventcheck"><button type="submit" class="btn btn-primary" align="center">&nbsp;새로운EVENT등록</button></a> -->
+
+<body>    
+    <div class="container"  *ngIf="selectedEventContent == null">    
+      <h2>Event List</h2>           
+      <table class="table table-hover">          
+        <thead>
+          <tr>
+            <th>NO</th>
+            <th>TITLE</th>
+          </tr>
+        </thead>       
+        <tbody>          
+         <tr *ngFor="let event of events; let i = index" (click)="showDetailPage(i)">   
+              <td>{{i+1}}</td>
+              <td>{{event.event_title}}</td>
+          </tr>     
+        </tbody>      
+       </table>     
+    </div> 
+    <app-eventdetail *ngIf="selectedEventContent != null" [eventContent]="selectedEventContent"></app-eventdetail>
+<button class="btn btn-primary" align="center" (click)="back()">&nbsp;목록보기</button>
+<a routerLink="/eventcheck"><button type="submit" class="btn btn-primary" align="center">&nbsp;새로운EVENT등록</button></a>  
+    </body>
+    </html>
+  
+ 

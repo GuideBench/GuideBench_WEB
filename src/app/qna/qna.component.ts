@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
 import { ListsService } from '../lists.service';
 import {  Router } from '@angular/router';
+import { htmlAstToRender3Ast } from '@angular/compiler/src/render3/r3_template_transform';
 
 @Component({
   selector: 'app-qna',
@@ -55,3 +56,4 @@ question_content: string,
 question_name : string,
 answer_content: string
 }
+

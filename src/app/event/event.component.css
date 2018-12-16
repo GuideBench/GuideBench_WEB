@@ -9,3 +9,12 @@
     line-height: 50px;
     padding: 0;
   }
+  
+  html,body{
+    height: 550px;
+    background-color: #FFFFFF;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }

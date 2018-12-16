@@ -1,3 +1,4 @@
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,17 +11,46 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
   
   <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script> -->
   
-  <h2>QnA List</h2>
+  <!-- <h2>QnA List</h2>
   <div *ngIf="selectedquestionContent == null && selectedanswerContent == null">
     <div *ngFor="let qna of qnas; let i = index" (click)="showDetailPage(i)">
       <h4>{{i+1}}&nbsp;&nbsp;{{qna.question_name}}&nbsp;&nbsp;{{qna.question_title}}</h4>
     </div>
   </div>
  <app-qnadetail *ngIf="selectedquestionContent != null || selectedanswerContent != null" [questionid]="selectedquestionid"  [questionContent]="selectedquestionContent" [answerContent]="selectedanswerContent" ></app-qnadetail>
+  <button class="btn btn-primary" align="center" (click)="back()">&nbsp;목록보기</button> -->
+
+  <body>    
+      <div class="container" *ngIf="selectedquestionContent == null && selectedanswerContent == null">    
+        <h2>QnA List</h2>           
+        <table class="table table-hover">          
+          <thead>
+            <tr>
+              <th>NO</th>
+              <th>NAME</th>
+              <th>TITLE</th>
+            </tr>
+          </thead>       
+          <tbody>          
+           <tr *ngFor="let qna of qnas; let i = index" (click)="showDetailPage(i)">   
+                <td>{{i+1}}</td>
+                <td>{{qna.question_name}}</td>
+                <td>{{qna.question_title}}</td>              
+            </tr>     
+          </tbody>      
+         </table>     
+      </div>   
+      <app-qnadetail *ngIf="selectedquestionContent != null || selectedanswerContent != null" [questionid]="selectedquestionid"  [questionContent]="selectedquestionContent" [answerContent]="selectedanswerContent" ></app-qnadetail>
   <button class="btn btn-primary" align="center" (click)="back()">&nbsp;목록보기</button>
+
+      </body>
+    
+      </html>

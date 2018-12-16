@@ -1,4 +1,4 @@
-body#benchcheck{ background-image:url("https://i.imgur.com/2EyLJfG.png"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;}
+/* body#benchcheck{ background-image:url("https://i.imgur.com/2EyLJfG.png"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;} */
 
 .benchcheck  .btn.btn-primary {
     background: #bda492 none repeat scroll 0 0;
@@ -10,4 +10,12 @@ body#benchcheck{ background-image:url("https://i.imgur.com/2EyLJfG.png"); backgr
     line-height: 50px;
     padding: 0;
     float: right;
+  }
+  html,body{
+    height: 550px;
+    background-color: #FFFFFF;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
