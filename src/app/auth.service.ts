@@ -17,6 +17,8 @@ export class AuthService {
       id,
       pw
     }).subscribe(data => {
+      const token = "0";
+      localStorage.setItem('token',token);
       document.getElementById('admin').style.display = "inline-block"
       document.getElementById('qna').style.display = "inline-block"
       document.getElementById('event').style.display = "inline-block"
@@ -33,6 +35,7 @@ export class AuthService {
       console.log(data, "Login Success")
       this.router.navigate(['']);
       alert("가이드벤치의 관리자님 환영합니다.");
+      
     })
   }
 
@@ -53,6 +56,7 @@ export class AuthService {
     }).subscribe(data => {
       console.log(data, "답변달기 완료")
       this.router.navigate(['/qna']);
+      alert("답변이 정상적으로 달렸습니다.")
     }
     )
   }
@@ -66,6 +70,7 @@ export class AuthService {
     }).subscribe(data => {
       console.log(data, "벤치등록 완료")
       this.router.navigate(['/benchinfo']);
+      alert("새로운 벤치가 등록되었습니다.")
     }
     )
   }
@@ -78,6 +83,7 @@ export class AuthService {
     }).subscribe(data => {
       console.log(data, "벤치별 시장/맛집 등록 완료")
       this.router.navigate(['/benchinfo']);
+      alert("새로운 시장/맛집을 추가하셨습니다.")
     }
     )
   }

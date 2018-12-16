@@ -14,7 +14,6 @@ export class AppComponent {
 
 
   ngOnInit(){
-    const token='1';
     const tokentest = localStorage.getItem('token');
     console.log(tokentest);
     const adminidlogin = localStorage.getItem('adminid');

@@ -12,6 +12,7 @@ export class EventComponent implements OnInit {
 
   public events: Event[] = [];
   public selectedEventContent: string = null;
+  public selectedeventtitle: string= null;
 
   constructor(public http:Http, private Lists:ListsService, public router:Router){ }
 
@@ -37,6 +38,7 @@ export class EventComponent implements OnInit {
   }
 
   public showDetailPage(index: number) {
+    this.selectedeventtitle = this.events[index].event_title;
     this.selectedEventContent = this.events[index].event_content;
   }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { AuthService } from '../auth.service';
 import {  Router } from '@angular/router';
+import { isContentQueryHost } from '@angular/core/src/render3/util';
 
 @Component({
   selector: 'app-qnadetail',
@@ -10,6 +11,8 @@ import {  Router } from '@angular/router';
 export class QnadetailComponent implements OnInit {
  
   @Input("questionid") questionid: string;
+  @Input("questionname") name : string;
+  @Input("questiontitle") questiontitle : string;
   @Input("questionContent") questionContent: string;
   @Input("answerContent") answerContent: string;
   

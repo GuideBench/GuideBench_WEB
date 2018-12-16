@@ -7,7 +7,8 @@ import {  Router } from '@angular/router';
   styleUrls: ['./eventdetail.component.css']
 })
 export class EventdetailComponent implements OnInit {
-
+  
+  @Input("eventtitle") eventtitle :string;
   @Input("eventContent") eventContent: string;
   
   constructor(public router:Router) { }

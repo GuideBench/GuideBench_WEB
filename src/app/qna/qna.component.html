@@ -48,8 +48,8 @@
           </tbody>      
          </table>     
       </div>   
-      <app-qnadetail *ngIf="selectedquestionContent != null || selectedanswerContent != null" [questionid]="selectedquestionid"  [questionContent]="selectedquestionContent" [answerContent]="selectedanswerContent" ></app-qnadetail>
-  <button class="btn btn-primary" align="center" (click)="back()">&nbsp;목록보기</button>
+      <app-qnadetail *ngIf="selectedquestionContent != null || selectedanswerContent != null" [questionid]="selectedquestionid" [questionname]="selectedquestionname" [questiontitle]="selectedquestiontitle"  [questionContent]="selectedquestionContent" [answerContent]="selectedanswerContent" ></app-qnadetail>
+      <p align="center"><button class="btn btn-primary"  (click)="back()">&nbsp;목록보기</button></p>
 
       </body>
     

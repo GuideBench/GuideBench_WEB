@@ -14,7 +14,7 @@ export class BenchdetailComponent implements OnInit {
   // @Input("benchinfoname") benchinfoname: string;
   // @Input("benchinfoaddress") benchinfoaddress: string;
   @Input("benchid") benchid : string;
-
+  @Input("benchname") benchname :string;
   constructor(private Auth:AuthService,public router:Router) { }
 
   ngOnInit() {

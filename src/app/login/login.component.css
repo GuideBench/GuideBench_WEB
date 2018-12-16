@@ -1,12 +1,12 @@
-body#LoginForm{ background-image:url("https://i.imgur.com/2EyLJfG.png"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;}
+/* body#LoginForm{ background-image:url("https://i.imgur.com/2EyLJfG.png"); background-repeat:no-repeat; background-position:center; background-size:cover; padding:10px;} */
 .panel h2{ 
     color:#6b5545 ; font-size:18px; margin:0 0 8px 0;
 }
 .panel{
-    background:#bda492;
+    background:#FFFFFF;
 }
 .login-form .form-control {
-  background: #bda492 none repeat scroll 0 0;
+  background: #FFFFFF none repeat scroll 0 0;
   border: 1px solid #6b5545;
   border-radius: 4px;
   font-size: 14px;
@@ -14,7 +14,7 @@ body#LoginForm{ background-image:url("https://i.imgur.com/2EyLJfG.png"); backgro
   line-height: 50px;
 }
 .main-div {
-  background: #bda492 none repeat scroll 0 0;
+  background: #FFFFFF none repeat scroll 0 0;
   border-radius: 2px;
   margin: 10px auto 30px;
   max-width: 38%;
@@ -27,7 +27,7 @@ body#LoginForm{ background-image:url("https://i.imgur.com/2EyLJfG.png"); backgro
 .login-form{ text-align:center;}
 
 .login-form  .btn.btn-primary {
-  background: #bda492 none repeat scroll 0 0;
+  background: #FFFFFF none repeat scroll 0 0;
   border-color: #6b5545;
   color: #6b5545;
   font-size: 14px;
@@ -43,8 +43,17 @@ body#LoginForm{ background-image:url("https://i.imgur.com/2EyLJfG.png"); backgro
   margin: auto;
 }
 .login-form .btn.btn-primary.reset {
-  background: #bda492 none repeat scroll 0 0;
+  background: #FFFFFF none repeat scroll 0 0;
 }
 .back { text-align: left; margin-top:10px;}
-.back a {color: #6b5545; font-size: 13px;text-decoration: none;}
+.back a {color: #FFFFFF; font-size: 13px;text-decoration: none;}
  
+
+html,body{
+  height: 550px;
+  background-color: #FFFFFF;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

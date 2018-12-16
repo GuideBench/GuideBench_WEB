@@ -54,9 +54,9 @@
           </tbody>      
          </table>     
       </div>   
-      <app-benchdetail *ngIf="selectedbenchinfocategory != null || selectedbenchinfoname != null || selectedbenchinfoaddress != null"  [benchid]="selectedbenchid"></app-benchdetail>
-      <button class="btn btn-primary" align="center" (click)="back()">&nbsp;목록보기</button>
-      <a routerLink="/benchcheck"><button type="submit" class="btn btn-primary" align="center">&nbsp;새로운BENCH등록</button></a>
+      <app-benchdetail *ngIf="selectedbenchinfocategory != null || selectedbenchinfoname != null || selectedbenchinfoaddress != null"  [benchid]="selectedbenchid" [benchname]="selectedbenchname"></app-benchdetail>
+      <p align="center"> <button class="btn btn-primary" align="center" (click)="back()">&nbsp;목록보기</button> &nbsp;&nbsp;&nbsp;&nbsp;
+      <a routerLink="/benchcheck"><button type="submit" class="btn btn-primary" align="center">&nbsp;새로운BENCH등록</button></a></p>  
       </body>
     
   </html>

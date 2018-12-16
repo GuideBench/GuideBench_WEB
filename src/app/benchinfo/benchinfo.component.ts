@@ -17,6 +17,7 @@ export class BenchinfoComponent implements OnInit {
   public selectedbenchinfocategory: string = null;
   public selectedbenchinfoname: string = null;
   public selectedbenchinfoaddress: string = null;
+  public selectedbenchname:string = null;
 
 
   constructor(public http:Http, private Lists:ListsService,public router:Router) {
@@ -73,6 +74,7 @@ export class BenchinfoComponent implements OnInit {
         alert("에러발생삐용삐용");
       }
     });
+    this.selectedbenchname = this.benchs[index].bench_name;
     this.selectedbenchinfocategory = 'a'
     this.selectedbenchinfoname='a'
     this.selectedbenchinfoaddress='a'

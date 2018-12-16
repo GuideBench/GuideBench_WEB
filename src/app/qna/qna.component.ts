@@ -15,6 +15,8 @@ export class QnaComponent implements OnInit {
   public selectedquestionContent: string = null;
   public selectedanswerContent: string = null;
   public selectedquestionid: string = null;
+  public selectedquestionname: string = null;
+  public selectedquestiontitle: string = null;
 
   constructor(public http:Http, private Lists:ListsService, public router:Router) { }
 
@@ -39,6 +41,8 @@ export class QnaComponent implements OnInit {
 
 public showDetailPage(index: number) {
   this.selectedquestionid = this.qnas[index]._id;
+  this.selectedquestionname = this.qnas[index].question_name;
+  this.selectedquestiontitle = this.qnas[index].question_title;
   this.selectedquestionContent = this.qnas[index].question_content;
   this.selectedanswerContent=  this.qnas[index].answer_content;
 }

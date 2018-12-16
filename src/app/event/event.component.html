@@ -47,9 +47,9 @@
         </tbody>      
        </table>     
     </div> 
-    <app-eventdetail *ngIf="selectedEventContent != null" [eventContent]="selectedEventContent"></app-eventdetail>
-<button class="btn btn-primary" align="center" (click)="back()">&nbsp;목록보기</button>
-<a routerLink="/eventcheck"><button type="submit" class="btn btn-primary" align="center">&nbsp;새로운EVENT등록</button></a>  
+    <app-eventdetail *ngIf="selectedEventContent != null" [eventtitle]="selectedeventtitle" [eventContent]="selectedEventContent"></app-eventdetail>
+<p align="center"><button class="btn btn-primary" align="center" (click)="back()">&nbsp;목록보기</button> &nbsp;&nbsp;&nbsp;&nbsp;
+<a routerLink="/eventcheck"><button type="submit" class="btn btn-primary" align="center">&nbsp;새로운EVENT등록</button></a></p>  
     </body>
     </html>
   
