@@ -21,7 +21,14 @@ export class LoginComponent implements OnInit {
     console.log(id,pw);
      const token = "no";
      localStorage.setItem('token',token);
-   
-    this.Auth.getlogin(id, pw)
+
+     if( id=="admin"&& pw=="admin" ){
+       this.Auth.getlogin(id, pw)
+     }
+     else{
+       alert("관리자 아이디 비밀번호로 로그인해주세요.")
+     }
+    
+    
    }
 }

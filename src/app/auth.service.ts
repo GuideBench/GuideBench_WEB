@@ -28,14 +28,13 @@ export class AuthService {
       document.getElementById('login').style.display = "none" //로그인했을때 메뉴바 보이게 하기
       const tokentest = localStorage.getItem('token');
       console.log(tokentest);
-      const adminid="admin";
-      const adminpw="admin";
-      localStorage.setItem('adminid',adminid);
-      localStorage.setItem('adminpw',adminpw);
+      const id="admin";
+      const pw="admin";
+      localStorage.setItem('adminid',id);
+      localStorage.setItem('adminpw',pw);
       console.log(data, "Login Success")
       this.router.navigate(['']);
-      alert("가이드벤치의 관리자님 환영합니다.");
-      
+      alert("가이드벤치의 관리자님 환영합니다.");     
     })
   }
 
@@ -46,6 +45,7 @@ export class AuthService {
     }).subscribe(data => {
       console.log(data, "event등록성공")
       this.router.navigate(['/event']);
+      alert("event가 성공적으로 등록되었습니다.")
     }
     )
   }
