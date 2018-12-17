@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
      const token = "no";
      localStorage.setItem('token',token);
 
-     if( id=="admin"&& pw=="admin" ){
+     if( id=="adminn"&& pw=="0000" ){
        this.Auth.getlogin(id, pw)
      }
      else{

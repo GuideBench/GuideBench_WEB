@@ -17,8 +17,7 @@ export class AuthService {
       id,
       pw
     }).subscribe(data => {
-      const token = "0";
-      localStorage.setItem('token',token);
+     
       document.getElementById('admin').style.display = "inline-block"
       document.getElementById('qna').style.display = "inline-block"
       document.getElementById('event').style.display = "inline-block"
@@ -28,10 +27,8 @@ export class AuthService {
       document.getElementById('login').style.display = "none" //로그인했을때 메뉴바 보이게 하기
       const tokentest = localStorage.getItem('token');
       console.log(tokentest);
-      const id="admin";
-      const pw="admin";
-      localStorage.setItem('adminid',id);
-      localStorage.setItem('adminpw',pw);
+      const token = "0";   
+      localStorage.setItem('token',token);
       console.log(data, "Login Success")
       this.router.navigate(['']);
       alert("가이드벤치의 관리자님 환영합니다.");     

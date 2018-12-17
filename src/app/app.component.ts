@@ -16,10 +16,7 @@ export class AppComponent {
   ngOnInit(){
     const tokentest = localStorage.getItem('token');
     console.log(tokentest);
-    const adminidlogin = localStorage.getItem('adminid');
-    const adminpwlogin = localStorage.getItem('adminpw');
-    // console.log(adminidlogin,adminpwlogin);
-    if(tokentest == '0' && adminidlogin=='admin' && adminpwlogin=='admin'){
+    if(tokentest == '0'){
       document.getElementById('admin').style.display = "inline-block"
       document.getElementById('qna').style.display = "inline-block"
       document.getElementById('event').style.display = "inline-block"
